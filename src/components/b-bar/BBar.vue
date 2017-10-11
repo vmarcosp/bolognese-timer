@@ -11,9 +11,9 @@ export default {
   name: 'BBar',
   data() {
     return {
-      pathLogo: logo,
+      pathLogo: logo
     };
-  },
+  }
 };
 </script>
 

@@ -3,7 +3,7 @@
 
 <script>
 export default {
-  name: 'BTimer',
+  name: 'BTimer'
 };
 </script>
 

@@ -7,8 +7,8 @@ import BTimer from '@/components/timer/BTimer';
 export default {
   name: 'home',
   components: {
-    BTimer,
-  },
+    BTimer
+  }
 };
 </script>
 

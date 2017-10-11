@@ -13,8 +13,8 @@ import BBar from '@/components/b-bar/BBar';
 export default {
   name: 'app',
   components: {
-    BBar,
-  },
+    BBar
+  }
 };
 </script>
 
