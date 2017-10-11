@@ -1,12 +1,20 @@
 <template>
   <div class="app">
-    <router-view/>
+    <BBar/>
+    <main class="view-container">
+      <router-view/>
+    </main>
   </div>
 </template>
 
 <script>
+import BBar from '@/components/b-bar/BBar';
+
 export default {
   name: 'app',
+  components: {
+    BBar,
+  },
 };
 </script>
 
