@@ -19,18 +19,14 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  text-transform: uppercase;
-  padding: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: .5rem 0;
   display: flex;
-  font-weight: bold;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, .2);
-  color: white;
-  text-align: center;
-  font-size: 30px;
   .logo {
-    height: 100px;
+    height: 80px;
   }
 }
 </style>

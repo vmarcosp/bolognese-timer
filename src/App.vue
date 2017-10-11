@@ -26,6 +26,6 @@ body {
 }
 
 .app {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Pacifico', cursive;
 }
 </style>
