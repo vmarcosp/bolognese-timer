@@ -1,16 +1,6 @@
 <template>
-  <mu-paper style="display: inline-block;margin-right: 16px;">
-    <mu-menu>
-      <mu-menu-item title="menu 1">
-        <mu-badge content="12" slot="after" />
-      </mu-menu-item>
-      <mu-menu-item title="menu 2">
-        <mu-badge content="old" primary slot="after" />
-      </mu-menu-item>
-      <mu-menu-item title="menu 3">
-        <mu-badge content="news" secondary slot="after" />
-      </mu-menu-item>
-    </mu-menu>
+  <mu-paper class="container" :zDepth="2">
+    <span class="timer-value">12:00</span>
   </mu-paper>
 </template>
 
@@ -21,5 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.container{
+  margin: 20px;
+  text-align: center;
+    >.timer-value{
+    font-size:40px;
+  }
+}
 </style>
