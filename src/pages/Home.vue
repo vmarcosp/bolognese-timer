@@ -1,14 +1,14 @@
 <template>
-	<BTimer/>
+  <BTimer/>
 </template>
 <script>
 import BTimer from '@/components/timer/BTimer';
 
 export default {
-	name: 'home',
-	components: {
-		BTimer
-	}
+  name: 'home',
+  components: {
+    BTimer,
+  },
 };
 </script>
 
