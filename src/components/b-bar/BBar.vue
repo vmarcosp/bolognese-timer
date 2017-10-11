@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <!-- <img class="logo" :src="pathLogo"> -->
-    <span>Bolognese Timer</span>
+    <img class="logo" :src="pathLogo">
   </div>
 </template>
 
@@ -31,7 +30,7 @@ export default {
   text-align: center;
   font-size: 30px;
   .logo {
-    height: 50px;
+    height: 100px;
   }
 }
 </style>
