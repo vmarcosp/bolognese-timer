@@ -1,9 +1,13 @@
 import localforage from 'localforage';
+import TimerMode from '../../models/TimerMode';
+const DEFAULT_TIME = '25:00';
+const COLLECTION_NAME = 'pomodoro';
 
-localforage.setItem('timer', '25:00');
+const pomodoroMode = new TimerMode(DEFAULT_TIME);
+localforage.setItem(COLLECTION_NAME, pomodoroMode);
 
 const state = {
-  list: []
+  defaultTime: DEFAULT_TIME
 };
 
 const mutations = {};
