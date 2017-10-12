@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import 'normalize.css';
 import 'font-awesome/css/font-awesome.css';
-import '@/assets/images/logoblue.svg';
 import 'mdi/css/materialdesignicons.min.css';
 import App from './App';
 import router from './router';
