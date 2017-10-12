@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <BBar/>
+    <BTab/>
     <main class="view-container">
       <router-view/>
     </main>
@@ -8,12 +9,14 @@
 </template>
 
 <script>
-import BBar from '@/components/b-bar/BBar';
+import { BBar } from '@/components/b-bar';
+import { BTab } from '@/components/b-tab';
 
 export default {
   name: 'app',
   components: {
-    BBar
+    BBar,
+    BTab
   }
 };
 </script>
