@@ -33,6 +33,7 @@ export default {
   background: 0;
   color: $gray;
   display: flex;
+  outline: 0;
   flex-flow: column wrap;
   align-items: center;
 }

@@ -120,6 +120,7 @@ export default {
     }
     >.controls {
       order: 1;
+      padding:1rem 0;
     }
   }
 }
