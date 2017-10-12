@@ -1,7 +1,7 @@
 <template>
   <router-link class="tab-link" :to="viewPath" exact>
     <span :class="`mdi mdi-${icon}`"></span>
-    <div class="tab-item">{{tabName}}</div>
+    <div class="tab-name">{{tabName}}</div>
   </router-link>
 </template>
 
@@ -30,19 +30,41 @@ export default {
 .tab-link {
   width: 100%;
   background: $background;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media screen and(min-width:$mobile-screen-size) {
+  .tab-link {
+    padding: 1rem;
+    color: $gray;
+    align-items: center;
+    background: $gray-light;
+    .tab-name {
+      margin-left:10px;
+      font-size:20px;
+    }
+    .mdi{
+      font-size:30px;
+    }
+    &.router-link-active {
+      background: $background;
+      color: $primary;
+    }
+  }
 }
 
 @media screen and(max-width:$mobile-screen-size) {
   .tab-link {
-    padding: .3rem;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
-    display: flex;
-    flex-flow: column wrap;
     align-items: center;
+    flex-flow: column wrap;
+    padding: .3rem;
     color:$gray;
-    border:solid 3px $background;  
+    border: solid 3px $background;
+    .tab-name {
+      font-size: 16px;
+    }
     .mdi {
       font-size: 26px;
     }

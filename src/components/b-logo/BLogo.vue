@@ -18,6 +18,12 @@ export default {
 <style lang="scss" scoped>
 @import '~@scss-variables';
 
+@media screen and (min-width:$mobile-screen-size) {
+  .logo{
+    height: 70px;
+  }
+}
+
 @media screen and (max-width:$mobile-screen-size) {
   .logo{
     height: 50px;

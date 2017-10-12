@@ -26,6 +26,15 @@ export default {
   justify-content: space-between;
 }
 
+@media screen and(min-width:$mobile-screen-size) {
+  .container {
+    margin-top: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .23);
+    max-width: 700px;
+    margin: 1rem auto;
+  }
+}
+
 @media screen and (max-width:$mobile-screen-size) {
   .container {
     width: 100%;
