@@ -31,7 +31,9 @@ export default {
 <style lang="scss">
 @import '~@scss-variables';
 
-body {
+body,
+html,
+button {
   font-family: 'Lato', sans-serif;
   background: $background;
 }

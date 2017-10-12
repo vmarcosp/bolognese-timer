@@ -1,9 +1,11 @@
 import { vuex as Pomodoro } from './pomodoro';
 import { vuex as ShortBreak } from './short-break';
+import { vuex as LongBreak } from './long-break';
 
 const vuex = {
   Pomodoro,
-  ShortBreak
+  ShortBreak,
+  LongBreak
 };
 
 const keys = Object.keys(vuex);
