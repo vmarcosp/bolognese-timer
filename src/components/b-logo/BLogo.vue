@@ -1,29 +1,26 @@
 <template>
-  <div class="container">
-
-  </div>
+  <img class="logo" :src="pathLogo">
 </template>
 
 <script>
+import logo from '@/assets/images/logo.svg';
+
 export default {
-  name: 'BTab'
+  name: 'BLogo',
+  data() {
+    return {
+      pathLogo: logo
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import '~@scss-variables';
 
-.container {
-  height: 80px;
-  background: white;
-}
-
 @media screen and (max-width:$mobile-screen-size) {
-  .container {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+  .logo{
+    height: 60px;
   }
 }
 </style>
