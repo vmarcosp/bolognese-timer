@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Pomodoro from '@/pages/Pomodoro';
+import { Pomodoro } from '@/pages/pomodoro';
 
 Vue.use(Router);
 

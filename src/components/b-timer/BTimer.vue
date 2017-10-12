@@ -16,13 +16,19 @@ import moment from 'moment';
 
 export default {
   name: 'BTimer',
+  props: {
+    initialTime: {
+      required: true,
+      type: String
+    }
+  },
   components: {
     BTimerButton
   },
   data() {
     return {
-      time: '00:10',
-      primitiveTime: moment('00:10', 'mm:ss'),
+      time: this.initialTime,
+      primitiveTime: moment(this.initialTime, 'mm:ss'),
       timerInterval: null,
       stopped: false
     };
@@ -120,7 +126,7 @@ export default {
     }
     >.controls {
       order: 1;
-      padding:1rem 0;
+      padding: 1rem 0;
     }
   }
 }

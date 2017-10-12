@@ -1,5 +1,5 @@
 <template>
-  <BTimer/>
+  <BTimer initial-time="25:00"/>
 </template>
 <script>
 
