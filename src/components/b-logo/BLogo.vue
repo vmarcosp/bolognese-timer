@@ -1,5 +1,5 @@
 <template>
-  <img class="logo">
+  <img class="logo" :src="pathLogo">
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 
 @media screen and (max-width:$mobile-screen-size) {
   .logo{
-    height: 60px;
+    height: 50px;
   }
 }
 </style>
