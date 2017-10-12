@@ -1,5 +1,5 @@
 <template>
-  <img class="logo" :src="pathLogo">
+  <img class="logo">
 </template>
 
 <script>

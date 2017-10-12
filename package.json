@@ -11,6 +11,8 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "mdi": "^2.0.46",
     "normalize.css": "^7.0.0",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0"
