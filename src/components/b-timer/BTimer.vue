@@ -19,8 +19,8 @@ export default {
   },
   data() {
     return {
-      time: '25:00',
-      primitiveTime: moment('25:00', 'mm:ss'),
+      time: '00:10',
+      primitiveTime: moment('00:10', 'mm:ss'),
       timerInterval: null,
       stopped: false
     };
@@ -31,18 +31,31 @@ export default {
   methods: {
     init() {
       this.timerInterval = setInterval(() => {
-        this.primitiveTime.add(-1, 'seconds');
-        this.time = this.primitiveTime.format('mm:ss');
+        this.decrementTime();
       }, 1000);
     },
+    stopTimer() {
+      window.clearInterval(this.timerInterval);
+    },
     toggleTimer() {
-      if (!this.stopped) {
-        this.stopped = true;
-        window.clearInterval(this.timerInterval);
-      } else {
-        this.stopped = false;
-        this.init();
+      if (this.stopped) this.init();
+      else this.stopTimer();
+
+      this.stopped = !this.stopped;
+    },
+    decrementTime() {
+      if (this.finishedTimer()) {
+        this.notify();
       }
+      this.primitiveTime.add(-1, 'seconds');
+      this.time = this.primitiveTime.format('mm:ss');
+    },
+    finishedTimer() {
+      return this.time === '00:00';
+    },
+    notify() {
+      this.stopTimer();
+      // TODO:Notify parent component
     }
   }
 };
