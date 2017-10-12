@@ -3,6 +3,7 @@
     <div class="controls">
       <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
       <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
+      <BTimerButton label="Settings" icon="settings" />
     </div>
     <div class="timer-value">
       <span>{{time}}</span>

@@ -63,7 +63,7 @@ export default {
     color:$gray;
     border: solid 3px $background;
     .tab-name {
-      font-size: 16px;
+      font-size: 14px;
     }
     .mdi {
       font-size: 26px;
