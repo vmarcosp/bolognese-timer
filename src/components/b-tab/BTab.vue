@@ -39,9 +39,9 @@ export default {
   .container {
     width: 100%;
     box-shadow: 0 0px 2px rgba(0, 0, 0, .23);
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
   }
 }
 </style>
