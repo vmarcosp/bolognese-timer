@@ -1,21 +1,49 @@
 <template>
   <div class="container">
     <div class="controls">
-      <BTimerButton label="Stop" icon="pause-circle" />
-      <BTimerButton label="Play" icon="play-circle" />
-      <BTimerButton label="Reset" icon="stop-circle" />
+      <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
+      <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
     </div>
-    <span class="timer-value">22:00</span>
+    <span class="timer-value">{{time}}</span>
   </div>
 </template>
 
 <script>
 import { BTimerButton } from '@/components/b-timer-button';
+import moment from 'moment';
 
 export default {
   name: 'BTimer',
   components: {
     BTimerButton
+  },
+  data() {
+    return {
+      time: '25:00',
+      primitiveTime: moment('25:00', 'mm:ss'),
+      timerInterval: null,
+      stopped: false
+    };
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      this.timerInterval = setInterval(() => {
+        this.primitiveTime.add(-1, 'seconds');
+        this.time = this.primitiveTime.format('mm:ss');
+      }, 1000);
+    },
+    toggleTimer() {
+      if (!this.stopped) {
+        this.stopped = true;
+        window.clearInterval(this.timerInterval);
+      } else {
+        this.stopped = false;
+        this.init();
+      }
+    }
   }
 };
 </script>
@@ -27,6 +55,7 @@ export default {
   display: flex;
   >.timer-value {
     display: flex;
+    color: $primary;
     justify-content: center;
   }
   >.controls {

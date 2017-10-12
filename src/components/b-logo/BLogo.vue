@@ -26,7 +26,7 @@ export default {
 
 @media screen and (max-width:$mobile-screen-size) {
   .logo{
-    height: 50px;
+    height: 60px;
   }
 }
 </style>
