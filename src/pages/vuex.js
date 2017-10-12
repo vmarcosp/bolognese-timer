@@ -1,7 +1,9 @@
-// @ts-check
 import { vuex as Pomodoro } from './pomodoro';
+import { vuex as ShortBreak } from './short-break';
+
 const vuex = {
-  Pomodoro
+  Pomodoro,
+  ShortBreak
 };
 
 const keys = Object.keys(vuex);

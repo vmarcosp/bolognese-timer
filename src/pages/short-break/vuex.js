@@ -1,10 +1,10 @@
 import localforage from 'localforage';
 import TimerMode from '../../models/TimerMode';
-const DEFAULT_TIME = '25:00';
-const COLLECTION_NAME = 'pomodoro';
+const DEFAULT_TIME = '05:00';
+const COLLECTION_NAME = 'shortBreak';
 
-const pomodoroMode = new TimerMode(DEFAULT_TIME);
-localforage.setItem(COLLECTION_NAME, pomodoroMode);
+const shortBreakMode = new TimerMode(DEFAULT_TIME);
+localforage.setItem(COLLECTION_NAME, shortBreakMode);
 
 const state = {
   defaultTime: DEFAULT_TIME
