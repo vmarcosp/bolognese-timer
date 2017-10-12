@@ -30,16 +30,15 @@ export default {
   .container {
     margin-top: 1rem;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .23);
-    max-width: 700px;
-    margin: 1rem auto;
+    max-width: $mobile-screen-size;
+    margin: 2rem auto;
   }
 }
 
 @media screen and (max-width:$mobile-screen-size) {
   .container {
     width: 100%;
-    box-shadow: 0 0px 2px rgba(0, 0, 0, .23);
-    // position: fixed;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, .23); // position: fixed;
     // bottom: 0;
     // left: 0;
   }
