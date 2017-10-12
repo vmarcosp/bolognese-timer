@@ -1,4 +1,10 @@
-import { vuex as Pomodoro } from './Pomodoro';
+// @ts-check
+import { vuex as Pomodoro } from './pomodoro';
+import TimerMode from '../models/TimerMode';
+import localforage from 'localforage';
+
+const pomodoroMode = new TimerMode('25:00');
+localforage.setItem('pomodoro', pomodoroMode);
 
 const vuex = {
   Pomodoro
