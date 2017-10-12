@@ -2,6 +2,7 @@
   <BTimer/>
 </template>
 <script>
+
 import BTimer from '@/components/timer/BTimer';
 
 export default {
@@ -13,5 +14,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
