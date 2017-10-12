@@ -32,6 +32,7 @@ export default {
 @import '~@scss-variables';
 
 body {
+  font-family: 'Lato', sans-serif;
   background: $background;
 }
 
@@ -42,9 +43,8 @@ body,
 }
 
 .app {
-  font-family: 'Lato', sans-serif;
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 @media screen and (min-width:$mobile-screen-size) {
@@ -56,6 +56,7 @@ body,
   }
   .view-container {
     order: 3;
+    display: flex;
   }
 }
 
@@ -67,8 +68,6 @@ body,
     flex-grow: 1;
     order: 2;
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .tab-container {
     order: 3;
@@ -76,6 +75,4 @@ body,
     align-items: flex-end;
   }
 }
-
-.view-container {}
 </style>

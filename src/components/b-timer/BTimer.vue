@@ -4,7 +4,9 @@
       <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
       <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
     </div>
-    <span class="timer-value">{{time}}</span>
+    <div class="timer-value">
+      <span>{{time}}</span>
+    </div>
   </div>
 </template>
 
@@ -46,6 +48,7 @@ export default {
     decrementTime() {
       if (this.finishedTimer()) {
         this.notify();
+        return;
       }
       this.primitiveTime.add(-1, 'seconds');
       this.time = this.primitiveTime.format('mm:ss');
@@ -80,7 +83,7 @@ export default {
 @media screen and(min-width:$mobile-screen-size) {
   .container {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .23);
-    max-width: $mobile-screen-size;
+    width: $mobile-screen-size;
     margin: 0 auto;
     height: 400px;
     font-size: 100px;
@@ -106,11 +109,14 @@ export default {
 @media screen and(max-width:$mobile-screen-size) {
   .container {
     width: 100%;
+    box-sizing: border-box;
     flex-flow: column wrap;
     >.timer-value {
       order: 2;
+      flex-grow: 1;
       font-size: 80px;
-      margin: 7rem 0;
+      display: flex;
+      align-items: center;
     }
     >.controls {
       order: 1;
