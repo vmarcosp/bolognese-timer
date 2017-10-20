@@ -3,7 +3,6 @@
 
 *A simple and beautiful pomodoro timer*
 
-## License
 
 ## App Status
 - [X] Timer
@@ -11,6 +10,8 @@
 - [ ] Notifications
 - [ ] Offiline support
 - [ ] Custom time
+
+## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
