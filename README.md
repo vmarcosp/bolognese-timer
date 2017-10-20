@@ -1,7 +1,7 @@
 
 # Bolognese Timer
 
-*A simple e configurable pomodoro timer*
+*A simple pomodoro timer*
 
 ### Desktop version 
 ![Desktop version](https://github.com/vmarcosp/bolognese-timer/blob/master/screenshots/desktop-version.jpg)
