@@ -3,10 +3,10 @@
 
 *A simple e configurable pomodoro timer*
 
-- Desktop version 
+### Desktop version 
 ![Desktop version](https://github.com/vmarcosp/bolognese-timer/blob/master/screenshots/desktop.jpg)
 
-- Mobile Version <br/>
+### Mobile Version <br/>
 ![Desktop version](https://github.com/vmarcosp/bolognese-timer/blob/master/screenshots/mobile.jpg)
 
 ## App Status
