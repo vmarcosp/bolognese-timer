@@ -18,9 +18,9 @@ export default {
 <style lang="scss" scoped>
 @import '~@scss-variables';
 .container {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   display: flex;
-  box-shadow: 0 1px 2px rgba(0,0,0,.23);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.23);
   align-items: center;
   justify-content: center;
   background: $primary;

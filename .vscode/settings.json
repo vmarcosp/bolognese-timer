@@ -5,5 +5,6 @@
     "javascriptreact",
     "html",
     "vue"
-  ]
+  ],
+  "prettier.singleQuote": true
 }
