@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <!-- <div> -->
     <BTimer :initial-time="initialTime" />
-    <BModalSettings />
-  </div>
+    <!-- <BModalSettings /> -->
+  <!-- </div> -->
 </template>
 <script>
 import { mapState } from 'vuex';
