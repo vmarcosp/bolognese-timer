@@ -23,7 +23,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      '@scss-variables': resolve('src/assets/scss/utils/_variables.scss')
+      '@scss-variables': resolve('src/assets/scss/utils/_variables.scss'),
+      '@scss-polyfill':resolve('src/assets/scss/utils/_polyfill.scss')
     }
   },
   module: {
