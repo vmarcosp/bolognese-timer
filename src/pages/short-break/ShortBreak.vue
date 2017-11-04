@@ -2,7 +2,7 @@
   <BTimer :initial-time="initialTime" />
 </template>
 <script>
-import { BTimer } from '@/components/b-timer';
+import BTimer from '@/components/b-timer';
 import { mapState } from 'vuex';
 
 export default {

@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import { Pomodoro } from '@/pages/pomodoro';
-import { ShortBreak } from '@/pages/short-break';
-import { LongBreak } from '@/pages/long-break';
+import Pomodoro from '@/pages/pomodoro';
+import ShortBreak from '@/pages/short-break';
+import LongBreak from '@/pages/long-break';
 
 Vue.use(Router);
 

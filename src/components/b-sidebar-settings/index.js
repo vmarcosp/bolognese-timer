@@ -1,1 +1,1 @@
-export { default as BSidebarSettings } from './BSidebarSettings';
+export { default } from './BSidebarSettings';

@@ -1,2 +1,2 @@
-export { default as Pomodoro } from './Pomodoro';
+export { default } from './Pomodoro';
 export { default as vuex } from './vuex';

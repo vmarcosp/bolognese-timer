@@ -3,7 +3,7 @@
 </template>
 <script>
 import { mapState } from 'vuex';
-import { BTimer } from '@/components/b-timer';
+import BTimer from '@/components/b-timer';
 
 export default {
   name: 'LongBreak',

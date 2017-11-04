@@ -5,14 +5,15 @@
         <h1>{{title}}</h1>
       </div>
       <div class="sidebar-body">
-        <BInput v-model="teste" input-type="time" label="Time" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { BInput } from '@/components/b-input';
+import BInput from '@/components/b-input';
+import BSoundSwitcher from '@/components/b-sound-switcher';
+import BInputContainer from '@/components/b-input-container';
 
 export default {
   name: 'BSidebarSettings',
@@ -23,7 +24,9 @@ export default {
     }
   },
   components: {
-    BInput
+    BInput,
+    BSoundSwitcher,
+    BInputContainer
   },
   data() {
     return {

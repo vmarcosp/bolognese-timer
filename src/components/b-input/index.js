@@ -1,1 +1,1 @@
-export { default as BInput } from './BInput';
+export { default } from './BInput';

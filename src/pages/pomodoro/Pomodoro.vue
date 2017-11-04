@@ -6,8 +6,8 @@
 </template>
 <script>
 import { mapState } from 'vuex';
-import { BTimer } from '@/components/b-timer';
-import { BSidebarSettings } from '@/components/b-sidebar-settings';
+import BTimer from '@/components/b-timer';
+import BSidebarSettings from '@/components/b-sidebar-settings';
 
 export default {
   name: 'Pomodoro',
