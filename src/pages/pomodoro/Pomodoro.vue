@@ -1,7 +1,7 @@
 <template>
   <div>
     <BTimer :initial-time="initialTime" />
-    <BSidebarSettings />
+    <BSidebarSettings title="Pomodoro settings" />
   </div>
 </template>
 <script>

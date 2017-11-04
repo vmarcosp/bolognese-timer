@@ -1,11 +1,10 @@
 <template>
-  <div class="modal-container">
-    <div class="modal">
-      <div class="modal-header">
-        <h1>Pomodoro Settings</h1>
+  <div class="sidebar-container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>{{title}}</h1>
       </div>
-      <div class="modal-body"> 
-        <BInput v-model="teste" input-type="time" label="Time" />
+      <div class="sidebar-body">
         <BInput v-model="teste" input-type="time" label="Time" />
       </div>
     </div>
@@ -17,6 +16,12 @@ import { BInput } from '@/components/b-input';
 
 export default {
   name: 'BSidebarSettings',
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   components: {
     BInput
   },
@@ -31,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@scss-variables';
 
-.modal-container {
+.sidebar-container {
   left: 0;
   top: 0;
   height: 100%;
@@ -40,7 +45,7 @@ export default {
   position: fixed;
 }
 
-.modal {
+.sidebar {
   top: 0;
   right: 0;
   background: white;
@@ -48,20 +53,17 @@ export default {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.23);
   position: absolute;
   width: 500px;
-  > .modal-header {
+  @media screen and(max-width:$mobile-screen-size) {
+    width: 80%;
+  }
+  > .sidebar-header {
     color: $primary;
     padding: 0.5rem 1rem;
     box-sizing: border-box;
     border-bottom: solid 1px $gray-light;
   }
-  > .modal-body {
+  > .sidebar-body {
     padding: 1.5rem;
-  }
-}
-
-@media screen and(max-width:$mobile-screen-size) {
-  .modal {
-    width: 80%;
   }
 }
 </style>
