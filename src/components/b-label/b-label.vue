@@ -4,7 +4,13 @@
 
 <script>
 export default {
-  name: 'b-label'
+  name: 'b-label',
+  props: {
+    value: {
+      type: String,
+      required: true
+    }
+  }
 };
 </script>
 
