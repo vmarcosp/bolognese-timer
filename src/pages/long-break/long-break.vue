@@ -1,14 +1,14 @@
 <template>
-  <BTimer :initial-time="initialTime" />
+  <b-timer :initial-time="initialTime" />
 </template>
 <script>
 import { mapState } from 'vuex';
-import BTimer from '@/components/b-timer';
+import bTimer from '@/components/b-timer';
 
 export default {
-  name: 'LongBreak',
+  name: 'long-break',
   components: {
-    BTimer
+    bTimer
   },
   computed: mapState({
     initialTime: state => state.LongBreak.defaultTime

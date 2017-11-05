@@ -1,1 +1,1 @@
-export { default as BBar } from './BBar';
+export { default } from './b-bar';

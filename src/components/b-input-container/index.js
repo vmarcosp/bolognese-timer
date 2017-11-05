@@ -1,1 +1,1 @@
-export { default } from './BInputContainer';
+export { default } from './b-input-container';

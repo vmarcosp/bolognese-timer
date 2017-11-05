@@ -1,2 +1,2 @@
-export { default } from './ShortBreak';
+export { default } from './short-break';
 export { default as vuex } from './vuex';

@@ -1,6 +1,6 @@
 <template>
   <div class="b-input-container">
-    teste
+    <slot></slot>
   </div>
 </template>
 
@@ -12,7 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@scss-polyfill';
-@import '~@scss-variables';
 
 .b-input-container {
   @extend %flex;

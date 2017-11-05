@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'BTabItem',
+  name: 'b-tab-item',
   props: {
     viewPath: {
       required: true,
@@ -42,11 +42,11 @@ export default {
     align-items: center;
     background: $gray-light;
     .tab-name {
-      margin-left:10px;
-      font-size:20px;
+      margin-left: 10px;
+      font-size: 20px;
     }
-    .mdi{
-      font-size:30px;
+    .mdi {
+      font-size: 30px;
     }
     &.router-link-active {
       background: $background;
@@ -59,8 +59,8 @@ export default {
   .tab-link {
     align-items: center;
     flex-flow: column wrap;
-    padding: .3rem;
-    color:$gray;
+    padding: 0.3rem;
+    color: $gray;
     border: solid 3px $background;
     .tab-name {
       font-size: 14px;

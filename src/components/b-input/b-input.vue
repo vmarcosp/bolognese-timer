@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'BInput',
+  name: 'b-input',
   props: {
     inputType: {
       type: String,
@@ -27,12 +27,6 @@ export default {
 @import '~@scss-polyfill';
 @import '~@scss-variables';
 
-label {
-  color: $gray;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 0.5rem;
-}
 .b-input {
   outline: 0;
   padding: 0.5rem;

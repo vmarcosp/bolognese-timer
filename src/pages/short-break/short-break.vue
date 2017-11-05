@@ -1,14 +1,14 @@
 <template>
-  <BTimer :initial-time="initialTime" />
+  <b-timer :initial-time="initialTime" />
 </template>
 <script>
-import BTimer from '@/components/b-timer';
+import bTimer from '@/components/b-timer';
 import { mapState } from 'vuex';
 
 export default {
-  name: 'ShortBreak',
+  name: 'short-break',
   components: {
-    BTimer
+    bTimer
   },
   computed: mapState({
     initialTime: state => state.ShortBreak.defaultTime

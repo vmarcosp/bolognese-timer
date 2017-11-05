@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'BAlarm',
+  name: 'b-alarm',
   props: {
     soundPath: {
       required: true,

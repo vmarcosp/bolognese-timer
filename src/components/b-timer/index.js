@@ -1,1 +1,1 @@
-export { default } from './BTimer';
+export { default } from './b-timer';

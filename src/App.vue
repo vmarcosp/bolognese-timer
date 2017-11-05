@@ -2,7 +2,7 @@
   <div class="app">
 
     <div class="bar-container">
-      <BBar />
+      <b-bar />
     </div>
 
     <main class="view-container">
@@ -10,20 +10,20 @@
     </main>
 
     <div class="tab-container">
-      <BTab />
+      <b-tab />
     </div>
   </div>
 </template>
 
 <script>
-import { BBar } from '@/components/b-bar';
-import { BTab } from '@/components/b-tab';
+import bBar from '@/components/b-bar';
+import bTab from '@/components/b-tab';
 
 export default {
   name: 'app',
   components: {
-    BBar,
-    BTab
+    bBar,
+    bTab
   }
 };
 </script>
@@ -49,7 +49,7 @@ body,
   flex-flow: column wrap;
 }
 
-@media screen and (min-width:$mobile-screen-size) {
+@media screen and (min-width: $mobile-screen-size) {
   .bar-container {
     order: 1;
   }
@@ -62,7 +62,7 @@ body,
   }
 }
 
-@media screen and (max-width:$mobile-screen-size) {
+@media screen and (max-width: $mobile-screen-size) {
   .bar-container {
     order: 1;
   }

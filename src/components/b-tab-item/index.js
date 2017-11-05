@@ -1,1 +1,1 @@
-export { default as BTabItem } from './BTabItem';
+export { default } from './b-tab-item';

@@ -1,1 +1,1 @@
-export { default as BTimerButton } from './BTimerButton';
+export { default } from './b-timer-button';

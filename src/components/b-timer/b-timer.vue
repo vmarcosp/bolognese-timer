@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="controls">
-      <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
-      <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
-      <BTimerButton label="Settings" icon="settings" />
+      <b-timer-button @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
+      <b-timer-button label="Reset" button-color="#ffd34e" icon="stop-circle" />
+      <b-timer-button label="Settings" icon="settings" />
     </div>
     <div class="timer-value">
       <span>{{time}}</span>
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import { BTimerButton } from '@/components/b-timer-button';
+import bTimerButton from '@/components/b-timer-button';
 import moment from 'moment';
 
 export default {
-  name: 'BTimer',
+  name: 'b-timer',
   props: {
     initialTime: {
       required: true,
@@ -24,7 +24,7 @@ export default {
     }
   },
   components: {
-    BTimerButton
+    bTimerButton
   },
   data() {
     return {
@@ -76,12 +76,12 @@ export default {
 
 .container {
   display: flex;
-  >.timer-value {
+  > .timer-value {
     display: flex;
     color: $primary;
     justify-content: center;
   }
-  >.controls {
+  > .controls {
     display: flex;
     justify-content: space-around;
   }
@@ -89,7 +89,7 @@ export default {
 
 @media screen and(min-width:$mobile-screen-size) {
   .container {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .23);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.23);
     width: $mobile-screen-size;
     margin: 0 auto;
     height: 400px;
@@ -100,13 +100,13 @@ export default {
     justify-content: center;
     padding: 1rem 0;
     box-sizing: border-box;
-    >.timer-value {
+    > .timer-value {
       order: 1;
       align-items: center;
       flex-grow: 1;
       width: 100%;
     }
-    >.controls {
+    > .controls {
       order: 2;
       width: 100%;
     }
@@ -118,14 +118,14 @@ export default {
     width: 100%;
     box-sizing: border-box;
     flex-flow: column wrap;
-    >.timer-value {
+    > .timer-value {
       order: 2;
       flex-grow: 1;
       font-size: 80px;
       display: flex;
       align-items: center;
     }
-    >.controls {
+    > .controls {
       order: 1;
       padding: 1rem 0;
     }

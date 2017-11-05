@@ -5,18 +5,23 @@
         <h1>{{title}}</h1>
       </div>
       <div class="sidebar-body">
+        <b-input-container>
+          <b-label value="Timer"/>
+          <b-input input-type="time" :value="teste" />
+        </b-input-container/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BInput from '@/components/b-input';
-import BSoundSwitcher from '@/components/b-sound-switcher';
-import BInputContainer from '@/components/b-input-container';
+import bInput from '@/components/b-input';
+import bLabel from '@/components/b-label';
+import bSoundSwitcher from '@/components/b-sound-switcher';
+import bInputContainer from '@/components/b-input-container';
 
 export default {
-  name: 'BSidebarSettings',
+  name: 'b-sidebar-settings',
   props: {
     title: {
       type: String,
@@ -24,9 +29,10 @@ export default {
     }
   },
   components: {
-    BInput,
-    BSoundSwitcher,
-    BInputContainer
+    bInput,
+    bSoundSwitcher,
+    bLabel,
+    bInputContainer
   },
   data() {
     return {

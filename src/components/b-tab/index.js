@@ -1,1 +1,1 @@
-export { default as BTab } from './BTab';
+export { default } from './b-tab';

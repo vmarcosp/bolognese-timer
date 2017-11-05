@@ -1,1 +1,1 @@
-export { default } from './BSoundSwitcher';
+export { default } from './b-sound-switcher';

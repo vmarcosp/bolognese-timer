@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'BTimerButton',
+  name: 'b-timer-button',
   props: {
     label: {
       required: true,

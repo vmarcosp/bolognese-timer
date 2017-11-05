@@ -1,1 +1,1 @@
-export { default as BLogo } from './BLogo';
+export { default } from './b-logo';

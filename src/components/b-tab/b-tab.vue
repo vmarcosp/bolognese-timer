@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <BTabItem view-path="/" icon="alarm-plus" tab-name="Pomodoro" />
-    <BTabItem view-path="/short-break" icon="alarm-off" tab-name="Short break" />
-    <BTabItem view-path="/long-break" icon="alarm-snooze" tab-name="Long break" />
+    <b-tab-item view-path="/" icon="alarm-plus" tab-name="Pomodoro" />
+    <b-tab-item view-path="/short-break" icon="alarm-off" tab-name="Short break" />
+    <b-tab-item view-path="/long-break" icon="alarm-snooze" tab-name="Long break" />
   </div>
 </template>
 
 <script>
-import { BTabItem } from '@/components/b-tab-item';
+import bTabItem from '@/components/b-tab-item';
 export default {
-  name: 'BTab',
+  name: 'b-tab',
   components: {
-    BTabItem
+    bTabItem
   }
 };
 </script>
@@ -29,16 +29,16 @@ export default {
 @media screen and(min-width:$mobile-screen-size) {
   .container {
     margin-top: 1rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .23);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.23);
     max-width: $mobile-screen-size;
     margin: 2rem auto;
   }
 }
 
-@media screen and (max-width:$mobile-screen-size) {
+@media screen and (max-width: $mobile-screen-size) {
   .container {
     width: 100%;
-    box-shadow: 0 0px 2px rgba(0, 0, 0, .23); // position: fixed;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.23); // position: fixed;
     // bottom: 0;
     // left: 0;
   }

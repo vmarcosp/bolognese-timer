@@ -1,19 +1,19 @@
 <template>
   <div>
-    <BTimer :initial-time="initialTime" />
-    <BSidebarSettings title="Pomodoro settings" />
+    <b-timer :initial-time="initialTime" />
+    <b-sidebar-settings title="Pomodoro settings" />
   </div>
 </template>
 <script>
 import { mapState } from 'vuex';
-import BTimer from '@/components/b-timer';
-import BSidebarSettings from '@/components/b-sidebar-settings';
+import bTimer from '@/components/b-timer';
+import bSidebarSettings from '@/components/b-sidebar-settings';
 
 export default {
   name: 'Pomodoro',
   components: {
-    BTimer,
-    BSidebarSettings
+    bTimer,
+    bSidebarSettings
   },
   computed: mapState({
     initialTime: state => state.Pomodoro.defaultTime

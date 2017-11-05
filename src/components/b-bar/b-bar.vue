@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <BLogo/>
+    <b-logo />
   </div>
 </template>
 
 <script>
-import { BLogo } from '@/components/b-logo';
+import bLogo from '@/components/b-logo';
 
 export default {
   name: 'BBar',
   components: {
-    BLogo
+    bLogo
   }
 };
 </script>
