@@ -7,3 +7,8 @@
   flex-flow: column wrap;
   -ms-flex-flow: column wrap;
 }
+
+@mixin justify-content($value){
+  justify-content: $value;
+  -webkit-justify-content:$value;
+}

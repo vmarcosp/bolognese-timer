@@ -1,5 +1,5 @@
 <template>
-    <input class="b-input" :value="value" v-on:input="updateValue($event.target.value)" :type="inputType">
+    <input :class="classType" :value="value" v-on:input="updateValue($event.target.value)" :type="inputType">
 </template>
 
 <script>
@@ -19,19 +19,30 @@ export default {
     updateValue(value) {
       this.$emit('input', value);
     }
+  },
+  computed: {
+    classType() {
+      return this.inputType === 'range' ? 'b-input-range' : 'b-input';
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '~@scss-polyfill';
+@import '~@flexbox';
 @import '~@scss-variables';
 
 .b-input {
   outline: 0;
-  padding: 0.5rem;
   color: $gray;
-  font-size: 22px;
   border: solid 2px $gray-light;
+  @media screen and(min-width:$mobile-screen-size) {
+    font-size: 22px;
+    padding: 0.5rem;
+  }
+  @media screen and(max-width:$mobile-screen-size) {
+    font-size: 18px;
+    padding: 0.3rem;
+  }
 }
 </style>

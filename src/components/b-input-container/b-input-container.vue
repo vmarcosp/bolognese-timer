@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@scss-polyfill';
+@import '~@flexbox';
 
 .b-input-container {
   @extend %flex;

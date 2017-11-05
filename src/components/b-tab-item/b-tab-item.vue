@@ -1,6 +1,6 @@
 <template>
   <router-link class="tab-link" :to="viewPath" exact>
-    <span :class="`mdi mdi-${icon}`"></span>
+    <slot></slot>
     <div class="tab-name">{{tabName}}</div>
   </router-link>
 </template>

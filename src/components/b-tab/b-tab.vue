@@ -1,17 +1,30 @@
 <template>
   <div class="container">
-    <b-tab-item view-path="/" icon="alarm-plus" tab-name="Pomodoro" />
-    <b-tab-item view-path="/short-break" icon="alarm-off" tab-name="Short break" />
-    <b-tab-item view-path="/long-break" icon="alarm-snooze" tab-name="Long break" />
+
+    <b-tab-item view-path="/"  tab-name="Pomodoro">
+        <b-icon icon="alarm-plus"/>
+    </b-tab-item>
+
+    <b-tab-item view-path="/short-break" tab-name="Short break" >
+      <b-icon  icon="alarm-off"/>
+    </b-tab-item>
+
+    <b-tab-item view-path="/long-break"  tab-name="Long break" >
+      <b-icon icon="alarm-snooze"/>
+    </b-tab-item>
+
   </div>
+
 </template>
 
 <script>
 import bTabItem from '@/components/b-tab-item';
+import bIcon from '@/components/b-icon';
 export default {
   name: 'b-tab',
   components: {
-    bTabItem
+    bTabItem,
+    bIcon
   }
 };
 </script>
