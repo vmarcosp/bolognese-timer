@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <div class="controls">
-      <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
-      <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
+      <BTimerButton v-if="stopped" @click.native="toggleTimer()" label="Resume" button-color="#54acef" icon="play-circle" />
+      <BTimerButton v-else @click.native="toggleTimer()" label="Pause" button-color="#54acef" icon="pause-circle" />
+      <BTimerButton @click.native="resetTimer()" label="Reset" button-color="#ffd34e" icon="stop-circle" />
       <BTimerButton label="Settings" icon="settings" />
     </div>
     <div class="timer-value">
@@ -34,6 +35,11 @@ export default {
       stopped: false
     };
   },
+  computed: {
+    actualTime() {
+      return this.time;
+    }
+  },
   mounted() {
     this.init();
   },
@@ -42,6 +48,10 @@ export default {
       this.timerInterval = setInterval(() => {
         this.decrementTime();
       }, 1000);
+    },
+    resetTimer() {
+      this.time = this.initialTime;
+      this.primitiveTime = moment(this.initialTime, 'mm:ss');
     },
     stopTimer() {
       window.clearInterval(this.timerInterval);
@@ -66,6 +76,11 @@ export default {
     notify() {
       this.stopTimer();
       // TODO:Notify parent component
+    }
+  },
+  watch: {
+    actualTime() {
+      document.title = `${this.time} ${this.$route.name}`;
     }
   }
 };
