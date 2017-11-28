@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="controls">
-      <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
+      <BTimerButton v-if="stopped" @click.native="toggleTimer()" label="Resume" button-color="#54acef" icon="play-circle" />
+      <BTimerButton v-else @click.native="toggleTimer()" label="Pause" button-color="#54acef" icon="pause-circle" />
       <BTimerButton @click.native="resetTimer()" label="Reset" button-color="#ffd34e" icon="stop-circle" />
       <BTimerButton label="Settings" icon="settings" />
     </div>
