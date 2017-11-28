@@ -35,6 +35,11 @@ export default {
       stopped: false
     };
   },
+  computed: {
+    actualTime() {
+      return this.time;
+    }
+  },
   mounted() {
     this.init();
   },
@@ -71,6 +76,11 @@ export default {
     notify() {
       this.stopTimer();
       // TODO:Notify parent component
+    }
+  },
+  watch: {
+    actualTime() {
+      document.title = `${this.time} ${this.$route.name}`;
     }
   }
 };
