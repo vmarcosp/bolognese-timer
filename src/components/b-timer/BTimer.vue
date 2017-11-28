@@ -2,7 +2,7 @@
   <div class="container">
     <div class="controls">
       <BTimerButton @click.native="toggleTimer()" label="Play" button-color="#54acef" :icon="stopped ? 'play-circle' : 'pause-circle' " />
-      <BTimerButton label="Reset" button-color="#ffd34e" icon="stop-circle" />
+      <BTimerButton @click.native="resetTimer()" label="Reset" button-color="#ffd34e" icon="stop-circle" />
       <BTimerButton label="Settings" icon="settings" />
     </div>
     <div class="timer-value">
@@ -42,6 +42,10 @@ export default {
       this.timerInterval = setInterval(() => {
         this.decrementTime();
       }, 1000);
+    },
+    resetTimer() {
+      this.time = this.initialTime;
+      this.primitiveTime = moment(this.initialTime, 'mm:ss');
     },
     stopTimer() {
       window.clearInterval(this.timerInterval);
